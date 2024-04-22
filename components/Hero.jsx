@@ -1,9 +1,15 @@
 import Link from "next/link";
-import { RiArrowDownSLine } from "react-icons/ri";
+import {
+  RiArrowDownSLine,
+  RiBriefcase4Fill,
+  RiTeamFill,
+  RiTodoFill,
+} from "react-icons/ri";
 import { Button } from "./ui/button";
 import { Folder, Send } from "lucide-react";
 import { Socials } from "./Socials";
 import { DevImg } from "./DevImg";
+import Badge from "./Badge";
 
 const Hero = () => {
   return (
@@ -41,11 +47,34 @@ const Hero = () => {
           </div>
           {/* Image */}
           <div className="hidden xl:flex relative">
+            {/* Badge 1 */}
+            <Badge
+              containerStyles="absolute top-[24%] -left-[5rem] w-[200px] h-[68px]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={3}
+              badgeText="Years of Experience"
+            />
+            {/* Badge 2 */}
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem] w-[220px] h-[68px]"
+              icon={<RiTodoFill />}
+              endCountNum={15}
+              endCountText={"+"}
+              badgeText="Finished Projects"
+            />
+            {/* Badge 3 */}
+            <Badge
+              containerStyles="absolute top-[55%] -right-8 w-[220px] h-[68px]"
+              icon={<RiTeamFill />}
+              endCountNum={30}
+              endCountText={"+"}
+              badgeText="Happy Clients"
+            />
             {/* image */}
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
-              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-              imgSrc="/hero/developer.png"
+              containerStyles="bg-hero_shape w-[509px] h-[461px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/Developer2.png"
             />
           </div>
         </div>
