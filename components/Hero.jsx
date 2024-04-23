@@ -35,9 +35,11 @@ const Hero = () => {
                   Contact Me <Send />{" "}
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                View Projects <Folder />{" "}
-              </Button>
+              <Link href="/projects">
+                <Button variant="secondary" className="gap-x-2">
+                  View Projects <Folder />{" "}
+                </Button>
+              </Link>
             </div>
             {/* Socials */}
             <Socials

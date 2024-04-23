@@ -18,6 +18,7 @@ const projectData = [
     category: "React",
     name: "Nexa Website",
     description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+    tools: ["React", "TailwindCSS", "Framer Motion"],
     link: "/",
     github: "/",
   },

@@ -54,6 +54,9 @@ const uniqueCategories = [
 ];
 console.log(uniqueCategories);
 
+const numberOfCategories = uniqueCategories.length;
+const numCols = `md:grid-cols-${numberOfCategories}`;
+
 const ProjectsPage = () => {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState("all projects");
@@ -74,7 +77,7 @@ const ProjectsPage = () => {
         </h2>
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <TabsList
-            className={`w-full grid h-full md:grid-cols-${categories.length} lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none`}
+            className={`w-full grid h-full ${numCols} lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none`}
           >
             {categories.map((category, index) => {
               return (

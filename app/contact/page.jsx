@@ -6,7 +6,7 @@ const ContactPage = () => {
     <section>
       <div className="container mx-auto">
         {/* Text and illustration */}
-        <div className="grid xl:grid-cols-2 pt-12 xl:min-h-[380px] ">
+        <div className="grid xl:grid-cols-2 pt-12 xl:min-h-[380px] mb-16 xl:mb-36 ">
           {/* Text */}
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">

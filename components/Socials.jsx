@@ -10,15 +10,15 @@ import {
 
 const icons = [
   {
-    path: "/",
+    path: "https://www.linkedin.com/in/austin-farr7/",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/austinfarr",
     name: <RiGithubFill />,
   },
   {
-    path: "/",
+    path: "https://www.instagram.com/austinfarr7/",
     name: <RiInstagramFill />,
   },
 ];
