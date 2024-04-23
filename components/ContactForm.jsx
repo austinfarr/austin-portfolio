@@ -18,18 +18,13 @@ const initialFormData = {
 };
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
   const [formData, setFormData] = useState(initialFormData);
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const { values, isLoading, error } = formData;
 
   const { toast } = useToast();
-
-  console.log(formData);
 
   const handleChange = ({ target }) => {
     setFormData((prev) => ({
@@ -42,12 +37,12 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    //Set loading state
     setFormData((prev) => ({ ...prev, isLoading: true }));
 
     const { name, email, message } = formData.values;
-
-    event.preventDefault();
-    // const formData = { name, email, message };
 
     try {
       const body = JSON.stringify({
@@ -56,32 +51,21 @@ const ContactForm = () => {
         message,
       });
 
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Accept: "application/json",
-        },
-        body: body,
-      });
-      console.log("response", response);
+      await sendContactForm(body);
 
-      if (response.ok) {
-        setFormData(initialFormData);
-        toast({
-          description: "Your message has been sent.",
-        });
-        setIsSubmitted(true);
-      } else {
-        console.error("Error occurred!!!!!`:", error);
-        setFormData((prev) => ({
-          ...prev,
-          isLoading: false,
-          error: "An error occurred. Please try again later.",
-        }));
-      }
+      //If successful, reset form data and show success message
+      setFormData(initialFormData);
+      toast({
+        description: "Your message has been sent.",
+      });
+      setIsSubmitted(true);
     } catch (error) {
-      console.error("Error occurred!!!!!`:", error);
+      //If error, show error message
+      setFormData((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: "An error occurred. Please try again later.",
+      }));
     }
   };
 
