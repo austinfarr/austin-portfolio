@@ -110,16 +110,13 @@ const About = () => {
           {/* tabs */}
           <div className="flex-1">
             <Tabs defaultValue="work">
-              <TabsList className="w-full grid xl:grid-cols-2 xl:max-w-[520px] xl:border dark:border-none">
+              <TabsList className="w-full grid grid-cols-2 xl:max-w-[520px] border dark:border-none">
                 <TabsTrigger className="w-[162px] xl:w-auto" value="work">
                   My Work
                 </TabsTrigger>
                 <TabsTrigger className="w-[162px] xl:w-auto" value="experience">
                   Experience
                 </TabsTrigger>
-                {/* <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
-                  Skills
-                </TabsTrigger> */}
               </TabsList>
               {/* Tab content */}
               <div className="text-lg mt-12 xl:mt-8">
@@ -127,7 +124,7 @@ const About = () => {
                 <TabsContent value="work">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">I love bringing ideas to life</h3>
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0 ">
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0 text-left ">
                       As a full-stack Web Developer, I specialize in crafting
                       intuitive websites with cutting-edge technology,
                       delivering dynamic and engaging user experiences{" "}
@@ -148,13 +145,21 @@ const About = () => {
                               key={index}
                               className=" flex flex-col items-center justify-center xl:hover:animate-bounce"
                             >
-                              <Image
-                                src={imgPath}
-                                width={60}
-                                height={60}
-                                alt="tool"
-                                priority
-                              />
+                              <div className="relative lg:w-[60px] lg:h-[60px] w-[30px] h-[30px]">
+                                <Image
+                                  src={imgPath}
+                                  // width={60}
+                                  // height={60}
+                                  alt="tool"
+                                  priority
+                                  fill
+                                  // sizes="100vw"
+                                  // style={{
+                                  //   width: "10%",
+                                  //   height: "10%",
+                                  // }}
+                                />
+                              </div>
                               <div className="text-center text-muted-foreground">
                                 {item.label}
                               </div>
@@ -172,11 +177,11 @@ const About = () => {
                       My Journey
                     </h3>
                     {/* icons */}
-                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                    <div className="grid xl:grid-cols-2 xl:gap-4 gap-2 xl:mb-12 mb-6">
                       {infoData.map((item, index) => {
                         return (
                           <div
-                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            className="flex items-center gap-x-4 xl:mx-0"
                             key={index}
                           >
                             <div className="text-primary">{item.icon}</div>
