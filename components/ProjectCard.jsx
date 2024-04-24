@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
   return (
     // <Dialog>
     // <DialogTrigger asChild>
-    <Link href={`/projects/${project.id}`}>
+    <Link passHref href={`/projects/${project.id}`}>
       <Card className="group overflow-hidden relative dark:border-white/30 cursor-pointer min-h-[95%]">
         <CardHeader className="p-0">
           {/* Image */}

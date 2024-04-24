@@ -12,6 +12,9 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata = {
   title: "Austin Farr - Portfolio",
   description: "Check out my personal website!",
+  icons: {
+    icon: "/a-logo.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
