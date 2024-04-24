@@ -11,44 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "./ProjectCard";
 import Link from "next/link";
 import { Button } from "./ui/button";
-
-const projectData = [
-  {
-    image: "/work/AriseAfricaMockup.png",
-    category: "React",
-    name: "Arise Auctions",
-    description:
-      "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
-    tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/PortfolioSite.png",
-    category: "Next.js",
-    name: "Portfolio Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
-    link: "/",
-    github: "/",
-  },
-  // {
-  //   image: "/work/2.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-  // {
-  //   image: "/work/1.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-];
+import { projectData } from "@/lib/projectData";
 
 const Work = () => {
   return (
@@ -59,8 +22,8 @@ const Work = () => {
           className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] 
         flex flex-col justify-center items-center xl:items-start "
         >
-          <h2 className="section-title mb-4 ">Latest Projects</h2>
-          <p className="subtitle mb-8">Lorem ipsum dolor </p>
+          <h2 className="section-title mb-8 ">Latest Projects</h2>
+          {/* <p className="subtitle mb-8">Lorem ipsum dolor </p> */}
           <Link href="/projects">
             <Button>All Projects</Button>
           </Link>

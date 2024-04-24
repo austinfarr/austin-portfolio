@@ -104,7 +104,7 @@ const About = () => {
           <div className="hidden xl:flex flex-1 relative">
             <DevImg
               containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-              imgSrc="/about/developer.png"
+              imgSrc="/about/AboutUs.svg"
             />
           </div>
           {/* tabs */}
@@ -146,7 +146,7 @@ const About = () => {
                           return (
                             <div
                               key={index}
-                              className=" flex flex-col items-center justify-center"
+                              className=" flex flex-col items-center justify-center xl:hover:animate-bounce"
                             >
                               <Image
                                 src={imgPath}
