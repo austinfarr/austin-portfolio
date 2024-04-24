@@ -6,47 +6,41 @@ import { useState } from "react";
 
 const projectData = [
   {
-    image: "/work/3.png",
+    image: "/work/AriseAfricaMockup.png",
     category: "React",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Arise Auctions",
+    description:
+      "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+    tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
     link: "/",
     github: "/",
   },
   {
-    image: "/work/4.png",
-    category: "Next.js",
-    name: "Nexa Website",
+    image: "/work/PortfolioSite.png",
+    category: "Next.JS",
+    name: "Portfolio Website",
     description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "Next.js",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "Next.js",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+    tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
     link: "/",
     github: "/",
   },
   // {
+  //   image: "/work/2.png",
+  //   category: "Next.js",
+  //   name: "Nexa Website",
+  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
   //   image: "/work/1.png",
-  //   category: "Vue.js",
+  //   category: "Next.js",
   //   name: "Nexa Website",
   //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
   //   link: "/",
   //   github: "/",
   // },
 ];
-
 //remove category duplicates
 const uniqueCategories = [
   "all projects",
@@ -77,7 +71,7 @@ const ProjectsPage = () => {
         </h2>
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <TabsList
-            className={`w-full grid h-full ${numCols} lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none`}
+            className={`w-full grid h-full md:grid-cols-3 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none`}
           >
             {categories.map((category, index) => {
               return (
@@ -92,7 +86,7 @@ const ProjectsPage = () => {
               );
             })}
           </TabsList>
-          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
             {filteredProjects.map((project, index) => {
               return (
                 <TabsContent key={index} value={category}>
