@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { SheetClose } from "./ui/sheet";
 
 const links = [
   { name: "home", path: "/" },
@@ -8,7 +9,7 @@ const links = [
   { name: "contact me", path: "/contact" },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underlineStyles, setOpen }) => {
   const path = usePathname();
 
   return (
@@ -19,6 +20,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             key={index}
             href={link.path}
             className={`capitalize ${linkStyles}`}
+            onClick={() => setOpen(false)}
           >
             {link.path === path && (
               <motion.span
