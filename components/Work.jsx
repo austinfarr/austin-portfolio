@@ -11,44 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "./ProjectCard";
 import Link from "next/link";
 import { Button } from "./ui/button";
-
-const projectData = [
-  {
-    image: "/work/AriseAfricaMockup.png",
-    category: "React",
-    name: "Arise Auctions",
-    description:
-      "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
-    tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/PortfolioSite.png",
-    category: "Next.js",
-    name: "Portfolio Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
-    link: "/",
-    github: "/",
-  },
-  // {
-  //   image: "/work/2.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-  // {
-  //   image: "/work/1.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-];
+import { projectData } from "@/lib/projectData";
 
 const Work = () => {
   return (

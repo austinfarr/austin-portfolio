@@ -146,7 +146,7 @@ const About = () => {
                           return (
                             <div
                               key={index}
-                              className=" flex flex-col items-center justify-center"
+                              className=" flex flex-col items-center justify-center xl:hover:animate-bounce"
                             >
                               <Image
                                 src={imgPath}

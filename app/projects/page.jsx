@@ -3,44 +3,49 @@
 import ProjectCard from "@/components/ProjectCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import { projectData } from "@/lib/projectData";
 
-const projectData = [
-  {
-    image: "/work/AriseAfricaMockup.png",
-    category: "React",
-    name: "Arise Auctions",
-    description:
-      "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
-    tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/PortfolioSite.png",
-    category: "Next.JS",
-    name: "Portfolio Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
-    link: "/",
-    github: "/",
-  },
-  // {
-  //   image: "/work/2.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-  // {
-  //   image: "/work/1.png",
-  //   category: "Next.js",
-  //   name: "Nexa Website",
-  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-  //   link: "/",
-  //   github: "/",
-  // },
-];
+//   {
+//     image: "/work/AriseAfricaMockup.png",
+//     category: "React",
+//     name: "Arise Auctions",
+//     short_description:
+//       "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+//     long_description:
+//       "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+//     tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/PortfolioSite.png",
+//     category: "Next.js",
+//     name: "Portfolio Website",
+//     short_description:
+//       "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+//     long_description:
+//       "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+//     tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
+//     link: "/",
+//     github: "/",
+//   },
+//   // {
+//   //   image: "/work/2.png",
+//   //   category: "Next.js",
+//   //   name: "Nexa Website",
+//   //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+//   //   link: "/",
+//   //   github: "/",
+//   // },
+//   // {
+//   //   image: "/work/1.png",
+//   //   category: "Next.js",
+//   //   name: "Nexa Website",
+//   //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+//   //   link: "/",
+//   //   github: "/",
+//   // },
+// ];
 //remove category duplicates
 const uniqueCategories = [
   "all projects",
