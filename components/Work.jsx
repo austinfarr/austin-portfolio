@@ -14,38 +14,40 @@ import { Button } from "./ui/button";
 
 const projectData = [
   {
-    image: "/work/3.png",
+    image: "/work/AriseAfricaMockup.png",
     category: "React",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    tools: ["React", "TailwindCSS", "Framer Motion"],
+    name: "Arise Auctions",
+    description:
+      "Designed and deployed a real-time auction application to enhance Arise Africa's donor engagement for the benefit of Zambia's youth.",
+    tools: ["Next.js", "Supabase", "MaterialUI", "Twilio Auth"],
     link: "/",
     github: "/",
   },
   {
-    image: "/work/4.png",
+    image: "/work/PortfolioSite.png",
     category: "Next.js",
-    name: "Nexa Website",
+    name: "Portfolio Website",
     description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+    tools: ["Next.js", "TailwindCSS", "ShadCN", "Framer Motion"],
     link: "/",
     github: "/",
   },
-  {
-    image: "/work/2.png",
-    category: "Next.js",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "Next.js",
-    name: "Nexa Website",
-    description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/",
-    github: "/",
-  },
+  // {
+  //   image: "/work/2.png",
+  //   category: "Next.js",
+  //   name: "Nexa Website",
+  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/1.png",
+  //   category: "Next.js",
+  //   name: "Nexa Website",
+  //   description: "Lorum ipsum dolor sit amet, consectetur adipiscing elit.",
+  //   link: "/",
+  //   github: "/",
+  // },
 ];
 
 const Work = () => {
@@ -66,7 +68,7 @@ const Work = () => {
         {/* slider */}
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
-            className="h-[480px] "
+            className="h-[540px] "
             slidesPerView={1}
             breakpoints={{
               640: {
