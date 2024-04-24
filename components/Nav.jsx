@@ -12,6 +12,14 @@ const links = [
 const Nav = ({ containerStyles, linkStyles, underlineStyles, setOpen }) => {
   const path = usePathname();
 
+  const handleClick = () => {
+    if (setOpen) {
+      setOpen(false);
+    } else {
+      console.log("No set open");
+    }
+  };
+
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
@@ -20,7 +28,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles, setOpen }) => {
             key={index}
             href={link.path}
             className={`capitalize ${linkStyles}`}
-            onClick={() => setOpen(false)}
+            onClick={handleClick}
           >
             {link.path === path && (
               <motion.span

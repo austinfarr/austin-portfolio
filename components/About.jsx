@@ -111,10 +111,10 @@ const About = () => {
           <div className="flex-1">
             <Tabs defaultValue="work">
               <TabsList className="w-full grid grid-cols-2 xl:max-w-[520px] border dark:border-none">
-                <TabsTrigger className="w-[162px] xl:w-auto" value="work">
+                <TabsTrigger className="w-auto" value="work">
                   My Work
                 </TabsTrigger>
-                <TabsTrigger className="w-[162px] xl:w-auto" value="experience">
+                <TabsTrigger className="w-auto" value="experience">
                   Experience
                 </TabsTrigger>
               </TabsList>
