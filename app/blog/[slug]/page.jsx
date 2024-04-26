@@ -27,7 +27,7 @@ const BlogArticle = async ({ params }) => {
 
   return (
     <section className="min-h-screen">
-      <div className="relative mx-auto my-4 flex flex-col items-center md:w-[700px] md:p-0 p-4  ">
+      <div className="relative mx-auto my-4 flex flex-col items-center md:w-[700px] md:p-0 p-12  ">
         <Link
           href="/blog"
           className="absolute bg-primary lg:top-0 lg:left-0 top-3 left-3 py-1 px-2 m-0 rounded-full"
@@ -38,7 +38,7 @@ const BlogArticle = async ({ params }) => {
           <span className="block text-center h4 text-primary font-semibold tracking-wide uppercase">
             Austin Farr - Blog
           </span>
-          <span className="block mt-4 text-6xl font-bold text-center tracking-tight">
+          <span className="block mt-4 md:text-6xl text-4xl font-bold text-center tracking-tight">
             {" "}
             {blogArticle.title}
           </span>
