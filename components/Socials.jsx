@@ -1,11 +1,15 @@
 "use client";
 
+import { Mail, MailIcon } from "lucide-react";
 import Link from "next/link";
 import {
   RiYoutubeFill,
   RiLinkedinFill,
   RiGithubFill,
   RiInstagramFill,
+  RiMailAddFill,
+  RiMailFill,
+  RiMailSendFill,
 } from "react-icons/ri";
 
 const icons = [
@@ -20,6 +24,10 @@ const icons = [
   {
     path: "https://www.instagram.com/austinfarr7/",
     name: <RiInstagramFill />,
+  },
+  {
+    path: "/contact",
+    name: <RiMailSendFill />,
   },
 ];
 

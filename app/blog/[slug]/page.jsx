@@ -6,6 +6,8 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 30;
+
 async function getBlogData(slug) {
   const query = `
   * [_type == "blog" && slug.current == '${slug}' ] {
@@ -52,7 +54,7 @@ const BlogArticle = async ({ params }) => {
           className="rounded-lg mt-8 border md:max-h-[400px] md:max-w-[700px] object-cover "
           priority
         />
-        <div className="my-16 w-full prose prose-blue prose-xl dark:prose-invert prose-li:marker:text-primary ">
+        <div className="my-16 w-full prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary ">
           <PortableText
             className="w-full m-0 p-0"
             value={blogArticle.content}
