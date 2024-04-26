@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Blogs from "@/components/Blogs";
 import { CallToAction } from "@/components/CallToAction";
 import Hero from "@/components/Hero";
 import Reviews from "@/components/Reviews";
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <Work />
+      <Blogs />
       {/* <Reviews /> */}
       <CallToAction />
     </main>
