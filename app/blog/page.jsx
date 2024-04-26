@@ -5,6 +5,8 @@ import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 30;
+
 async function getBlogData() {
   const query = `*[_type == 'blog'] | order(_createdAt desc) {
         title,
@@ -29,7 +31,7 @@ const BlogPage = async () => {
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto ">
           Blog page
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mx-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-20 md:mx-10">
           {!blogData && <h3 className="h3">Blogs coming soon!</h3>}
           {blogData &&
             blogData.map((blog, index) => {
