@@ -1,7 +1,10 @@
+import { Button } from "@/components/ui/button";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { format } from "date-fns";
+import { ArrowLeft } from "lucide-react";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getBlogData(slug) {
   const query = `
@@ -22,7 +25,13 @@ const BlogArticle = async ({ params }) => {
 
   return (
     <section className="min-h-screen">
-      <div className="mx-auto my-4 flex flex-col items-center w-[700px]  ">
+      <div className="relative mx-auto my-4 flex flex-col items-center md:w-[700px] md:p-0 p-4  ">
+        <Link
+          href="/blog"
+          className="absolute bg-primary lg:top-0 lg:left-0 top-3 left-3 py-1 px-2 m-0 rounded-full"
+        >
+          <ArrowLeft size={24} className="text-white" />
+        </Link>
         <h1>
           <span className="block text-center h4 text-primary font-semibold tracking-wide uppercase">
             Austin Farr - Blog
@@ -40,7 +49,7 @@ const BlogArticle = async ({ params }) => {
           alt={blogArticle.title}
           width={900}
           height={800}
-          className="rounded-lg mt-8 border max-h-[400px] max-w-[700px] object-cover"
+          className="rounded-lg mt-8 border md:max-h-[400px] md:max-w-[700px] object-cover "
           priority
         />
         <div className="my-16 w-full prose prose-blue prose-xl dark:prose-invert prose-li:marker:text-primary ">
