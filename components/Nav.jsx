@@ -6,6 +6,7 @@ import { SheetClose } from "./ui/sheet";
 const links = [
   { name: "home", path: "/" },
   { name: "my projects", path: "/projects" },
+  { name: "blog", path: "/blog" },
   { name: "contact me", path: "/contact" },
 ];
 
