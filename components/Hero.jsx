@@ -4,9 +4,10 @@ import {
   RiBriefcase4Fill,
   RiTeamFill,
   RiTodoFill,
+  RiToolsFill,
 } from "react-icons/ri";
 import { Button } from "./ui/button";
-import { Folder, Send } from "lucide-react";
+import { Folder, Send, Wrench } from "lucide-react";
 import { Socials } from "./Socials";
 import { DevImg } from "./DevImg";
 import Badge from "./Badge";
@@ -58,20 +59,27 @@ const Hero = () => {
             />
             {/* Badge 2 */}
             <Badge
-              containerStyles="absolute top-[80%] -left-[1rem] w-[220px] h-[68px]"
+              containerStyles="absolute top-[55%] -right-8 w-[220px] h-[68px]"
               icon={<RiTodoFill />}
               endCountNum={15}
               endCountText={"+"}
               badgeText="Finished Projects"
             />
-            {/* Badge 3 */}
             <Badge
+              containerStyles="absolute top-[80%] -left-[1rem] w-[230px] h-[68px]"
+              icon={<RiToolsFill size={35} />}
+              endCountNum={10}
+              endCountText={"+"}
+              badgeText="Technologies Used"
+            />
+            {/* Badge 3 */}
+            {/* <Badge
               containerStyles="absolute top-[55%] -right-8 w-[220px] h-[68px]"
               icon={<RiTeamFill />}
               endCountNum={10}
               endCountText={"+"}
               badgeText="Happy Clients"
-            />
+            /> */}
             {/* image */}
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg
