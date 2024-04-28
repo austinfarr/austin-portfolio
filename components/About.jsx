@@ -83,7 +83,7 @@ const skillData = [
       { imgPath: "/logo-icons/tailwind.svg", label: "Tailwind CSS" },
       { imgPath: "/logo-icons/docker.svg", label: "Docker" },
       { imgPath: "/logo-icons/figma.svg", label: "Figma" },
-      // { imgPath: "/logo-icons/webflow.svg" },
+      { imgPath: "/logo-icons/webflow.svg", label: "Webflow" },
     ],
   },
 ];
@@ -137,13 +137,13 @@ const About = () => {
                     </h4>
                     <div className="border-b border-border mb-4"></div>
                     <div className="flex xl:justify-start justify-center">
-                      <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center xl:justify-start max-w-[500px] xl:max-w-[500px]">
+                      <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center xl:justify-start max-w-[500px] xl:max-w-[600px]">
                         {getData(skillData, "tools").data.map((item, index) => {
                           const { imgPath } = item;
                           return (
                             <div
                               key={index}
-                              className=" flex flex-col items-center justify-center xl:hover:animate-bounce"
+                              className=" flex flex-col items-center justify-center xl:hover:scale-110 transition-all duration-300 ease-in-out"
                             >
                               <div className="relative lg:w-[60px] lg:h-[60px] w-[30px] h-[30px]">
                                 <Image
