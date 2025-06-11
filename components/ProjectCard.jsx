@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
               className="flex gap-x-4 w-full h-full bg-primary/70 dark:bg-white/90 scale-0 opacity-0 group-hover:scale-100 
             group-hover:opacity-100 transition-all duration-300 items-center justify-center"
             >
-              <Button className="bg-secondary rounded-full hover:bg-secondary hover:scale-125 transition-all duration-300">
+              <Button className="bg-secondary rounded-full hover:bg-secondary transition-all duration-300">
                 See More
               </Button>
               {/* <Link
@@ -83,7 +83,7 @@ const ProjectCard = ({ project }) => {
                   // </div>
                   <Badge
                     key={index}
-                    className="text-xs bg-secondary/20 dark:bg-white/20 rounded-md"
+                    className="text-xs bg-secondary/40 dark:bg-white/20 rounded-md"
                   >
                     {tool}
                   </Badge>
