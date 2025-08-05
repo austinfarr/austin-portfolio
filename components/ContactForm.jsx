@@ -109,7 +109,7 @@ const ContactForm = () => {
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
       <Button
-        className="rounded-full flex items-center gap-x-1 max-w-[166px]"
+        className="rounded-full flex items-center gap-x-1"
         type="submit"
         disabled={isLoading}
       >
