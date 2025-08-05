@@ -21,8 +21,6 @@ const getRecentBlogs = async () => {
 const Blogs = async () => {
   const recentBlogs = await getRecentBlogs();
 
-  console.log("recentblogs", recentBlogs);
-
   return (
     <section>
       <div className="container mx-auto lg:px-32 px-0">
