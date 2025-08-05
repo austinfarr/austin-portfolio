@@ -1,5 +1,4 @@
 import ContactForm from "@/components/ContactForm";
-import { MailIcon } from "lucide-react";
 
 const ContactPage = () => {
   return (
