@@ -37,21 +37,21 @@ const About = () => {
   };
 
   return (
-    <section className="pb-12 xl:py-24">
+    <section className="pb-12 xl:py-24 mb-10 lg:mb-0">
       <div className="container mx-auto">
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12">
           <div className="max-w-xl px-4 flex flex-col">
-            <h2 className="text-[48px] font-bold mb-6">
+            <h2 className="text-[40px] lg:text-[48px] font-bold mb-6">
               I bring ideas to life
             </h2>
             <p className="subtitle">
               As a full-stack Web Developer, I specialize in crafting intuitive
               websites with cutting-edge technology, delivering dynamic and
-              engaging user experiences{" "}
+              engaging user experiences
             </p>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center px-4">
             <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center max-w-[600px]">
               {getData(skillData, "tools").data.map((item, index) => {
                 const { imgPath } = item;
@@ -63,7 +63,7 @@ const About = () => {
                     <div className="relative lg:w-[60px] lg:h-[60px] w-[30px] h-[30px]">
                       <Image src={imgPath} alt="tool" priority fill />
                     </div>
-                    <div className="text-center text-muted-foreground">
+                    <div className="text-center text-muted-foreground text-sm">
                       {item.label}
                     </div>
                   </div>
