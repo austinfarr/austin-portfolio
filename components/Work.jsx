@@ -31,7 +31,7 @@ const Work = () => {
         {/* slider */}
         <div className="xl:max-w-[950px] xl:absolute right-0 top-0">
           <Swiper
-            className="xl:h-[540px] h-[620px] "
+            className="h-[600px] "
             slidesPerView={1}
             breakpoints={{
               640: {
@@ -47,7 +47,7 @@ const Work = () => {
             {/* show only  the first 4 projects for the slides */}
             {projectData.slice(0, 4).map((project, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="h-auto">
                   <ProjectCard project={project} />
                 </SwiperSlide>
               );

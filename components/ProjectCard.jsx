@@ -7,7 +7,7 @@ import { Card, CardHeader } from "./ui/card";
 const ProjectCard = ({ project }) => {
   return (
     <Link passHref href={`/projects/${project.id}`}>
-      <Card className="group overflow-hidden relative dark:border-white/30 cursor-pointer min-h-[95%]">
+      <Card className="group relative dark:border-white/30 cursor-pointer h-full flex flex-col">
         <CardHeader className="p-0">
           <div
             className="relative w-full h-[300px] flex items-center justify-center bg-tertiary 
@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
             </div>
           </div>
         </CardHeader>
-        <div className="h-full px-8 py-6">
+        <div className="px-8 py-6">
           <h4 className="h4 mb-1">{project.name}</h4>
           <p className="text-muted-foreground text-md">
             {project.short_description}
@@ -39,7 +39,8 @@ const ProjectCard = ({ project }) => {
                 return (
                   <Badge
                     key={index}
-                    className="text-xs bg-secondary/40 dark:bg-white/20 rounded-md"
+                    variant={"ghost"}
+                    className="text-sm  dark:bg-white/20 rounded-md"
                   >
                     {tool}
                   </Badge>
