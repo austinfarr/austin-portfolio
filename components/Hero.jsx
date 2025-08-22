@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   RiArrowDownSLine,
@@ -11,6 +12,7 @@ import { Folder, Send, Wrench } from "lucide-react";
 import { Socials } from "./Socials";
 import { DevImg } from "./DevImg";
 import Badge from "./Badge";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -19,7 +21,19 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-md uppercase font-black mb-4 text-primary tracking-[4px] ">
-              Web Developer
+              <TypeAnimation
+                sequence={[
+                  "Web Developer",
+                  2000,
+                  "Technologist",
+                  2000,
+                  "Consultant",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
             </div>
             <h1 className="h1">
               Hi, I&apos;m Austin
