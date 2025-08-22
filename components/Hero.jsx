@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-md uppercase font-black mb-4 text-primary tracking-[4px] ">
+            <div className="text-md uppercase lg:ml-1 font-black mb-4 text-primary tracking-[4px] ">
               <TypeAnimation
                 sequence={[
                   "Web Developer",

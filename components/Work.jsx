@@ -1,19 +1,16 @@
 "use client";
 
-import "swiper/css";
-import "swiper/css/pagination";
-
-import { Pagination } from "swiper/modules";
-
-//Swiper React imports
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import ProjectCard from "./ProjectCard";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { projectData } from "@/lib/projectData";
 
 const Work = () => {
+  // Get the 2 most recent projects (highest IDs)
+  const recentProjects = [...projectData]
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 2);
+
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
@@ -28,31 +25,15 @@ const Work = () => {
             <Button>All Projects</Button>
           </Link>
         </div>
-        {/* slider */}
+        {/* projects grid */}
         <div className="xl:max-w-[950px] xl:absolute right-0 top-0">
-          <Swiper
-            className="h-[560px] "
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-            }}
-            spaceBetween={30}
-            modules={[Pagination]}
-            pagination={{
-              clickable: true,
-            }}
-          >
-            {/* show only  the first 4 projects for the slides */}
-            {projectData.slice(0, 4).map((project, index) => {
-              return (
-                <SwiperSlide key={index} className="h-auto">
-                  <ProjectCard project={project} />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {recentProjects.map((project) => (
+              <div key={project.id} className="h-auto">
+                <ProjectCard project={project} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
