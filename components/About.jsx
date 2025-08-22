@@ -40,10 +40,14 @@ const About = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12">
           <div className="max-w-lg px-4 flex flex-col">
-            <h2 className="text-[40px] lg:text-[48px] font-bold mb-6">
+            <h2 className="text-[40px] lg:text-[48px] font-bold mb-2">
               I bring ideas to life
             </h2>
-            <p className="subtitle">
+            {/* Animated Primary Color Divider */}
+            <div className="hidden sm:block relative w-[25%] mb-6 overflow-hidden">
+              <div className="h-1 bg-primary rounded-full flex-1 animate-pulse"></div>
+            </div>
+            <p className="subtitle dark:text-white">
               As a full-stack Web Developer, I specialize in crafting intuitive
               websites with cutting-edge technology, delivering dynamic and
               engaging user experiences
@@ -62,7 +66,7 @@ const About = () => {
                     <div className="relative w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] ">
                       <Image src={imgPath} alt="tool" priority fill />
                     </div>
-                    <div className="text-center text-muted-foreground text-sm">
+                    <div className="text-center text-muted-foreground dark:text-white text-sm">
                       {item.label}
                     </div>
                   </div>
