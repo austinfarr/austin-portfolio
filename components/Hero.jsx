@@ -39,9 +39,8 @@ const Hero = () => {
               Hi, I&apos;m Austin
               {/* Hello, my name is Austin Farr */}
             </h1>
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0 my-1">
-              I&apos;m a web developer with a passion for creating beautiful and
-              functional websites.
+            <p className="subtitle max-w-[470px] mx-auto xl:mx-0 mt-2">
+              I create digital solutions where elegance meets functionality
             </p>
             {/* Buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
