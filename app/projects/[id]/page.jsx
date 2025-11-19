@@ -5,7 +5,8 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectIDPage = ({ params }) => {
+const ProjectIDPage = async props => {
+  const params = await props.params;
   const { id } = params;
 
   const project = projectData.find((project) => project.id === parseInt(id));
