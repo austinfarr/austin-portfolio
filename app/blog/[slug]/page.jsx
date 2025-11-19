@@ -22,7 +22,8 @@ async function getBlogData(slug) {
   return data;
 }
 
-const BlogArticle = async ({ params }) => {
+const BlogArticle = async props => {
+  const params = await props.params;
   const blogArticle = await getBlogData(params.slug);
 
   return (
