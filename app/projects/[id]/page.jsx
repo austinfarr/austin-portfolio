@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projectData } from "@/lib/projectData";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -55,16 +55,24 @@ const ProjectIDPage = async props => {
               })}
           </div>
         </div>
-        {github && (
-          <div className="flex items-center my-4">
+        <div className="flex items-center gap-x-4 my-4 flex-wrap gap-y-4">
+          {link && link !== "/" && (
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              <Button className="hover:scale-110 transition-all duration-200 text-white">
+                <ExternalLinkIcon className="w-6 h-6 mr-2" />
+                <h3 className="text-lg ">Visit Live Site</h3>
+              </Button>
+            </Link>
+          )}
+          {github && (
             <Link href={github}>
               <Button className="bg-secondary hover:bg-secondary hover:scale-110 transition-all duration-200  text-white">
                 <GitHubLogoIcon className="w-6 h-6 mr-2" />
                 <h3 className="text-lg ">View on Github</h3>
               </Button>
             </Link>
-          </div>
-        )}
+          )}
+        </div>
       </div>
       {/* <div> */}
       <Image
