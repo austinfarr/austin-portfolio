@@ -16,15 +16,24 @@ const skillData = [
   {
     title: "tools",
     data: [
-      { imgPath: "/logo-icons/html.svg", label: "HTML" },
-      { imgPath: "/logo-icons/css.svg", label: "CSS" },
       { imgPath: "/logo-icons/javascript.svg", label: "JavaScript" },
+      { imgPath: "/logo-icons/typescript.svg", label: "TypeScript" },
+      { imgPath: "/logo-icons/csharp.svg", label: "C#" },
+      { imgPath: "/logo-icons/java.svg", label: "Java" },
+      { imgPath: "/logo-icons/python.svg", label: "Python" },
       { imgPath: "/logo-icons/react.svg", label: "React" },
       { imgPath: "/logo-icons/nextjs.svg", label: "Next.js" },
       { imgPath: "/logo-icons/node.svg", label: "Node.js" },
-      { imgPath: "/logo-icons/mui.svg", label: "Material UI" },
-      { imgPath: "/logo-icons/tailwind.svg", label: "Tailwind CSS" },
+      { imgPath: "/logo-icons/dotnet.svg", label: ".NET" },
+      { imgPath: "/logo-icons/supabase.svg", label: "Supabase" },
+      { imgPath: "/logo-icons/postgresql.svg", label: "PostgreSQL" },
+      { imgPath: "/logo-icons/mongodb.svg", label: "MongoDB" },
+      { imgPath: "/logo-icons/aws.svg", label: "AWS" },
+      { imgPath: "/logo-icons/azure.svg", label: "Azure" },
       { imgPath: "/logo-icons/docker.svg", label: "Docker" },
+      { imgPath: "/logo-icons/tailwind.svg", label: "Tailwind CSS" },
+      { imgPath: "/logo-icons/openai.svg", label: "OpenAI" },
+      { imgPath: "/logo-icons/claude.svg", label: "Claude" },
       { imgPath: "/logo-icons/figma.svg", label: "Figma" },
     ],
   },
@@ -48,25 +57,25 @@ const About = () => {
               <div className="h-1 bg-primary rounded-full flex-1 animate-pulse"></div>
             </div>
             <p className="subtitle dark:text-white">
-              As a full-stack Web Developer, I specialize in crafting intuitive
-              websites with cutting-edge technology, delivering dynamic and
-              engaging user experiences
+              As a full-stack consultant, I&apos;ve shipped software across a
+              lot of stacks. These are the tools I reach for most — but the job
+              dictates the toolbox.
             </p>
           </div>
 
           <div className="flex items-center justify-center px-4">
-            <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-6 gap-4 lg:gap-6 max-w-[700px] w-full">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-[760px] w-full xl:min-w-[656px]">
               {getData(skillData, "tools").data.map((item, index) => {
                 const { imgPath } = item;
                 return (
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center xl:hover:scale-110 transition-all duration-300 ease-in-out"
+                    className="flex flex-col items-center justify-start w-[64px] sm:w-[72px] lg:w-[80px] xl:hover:scale-110 transition-all duration-300 ease-in-out"
                   >
                     <div className="relative w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] ">
                       <Image src={imgPath} alt="tool" priority fill />
                     </div>
-                    <div className="text-center text-muted-foreground dark:text-white text-sm">
+                    <div className="text-center text-muted-foreground dark:text-white text-xs sm:text-sm">
                       {item.label}
                     </div>
                   </div>

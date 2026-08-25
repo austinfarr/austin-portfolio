@@ -81,7 +81,7 @@ const Hero = () => {
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem] w-[230px] h-[68px]"
               icon={<RiToolsFill size={35} />}
-              endCountNum={10}
+              endCountNum={15}
               endCountText={"+"}
               badgeText="Technologies Used"
             />
