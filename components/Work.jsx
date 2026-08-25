@@ -6,8 +6,9 @@ import { Button } from "./ui/button";
 import { projectData } from "@/lib/projectData";
 
 const Work = () => {
-  // Get the 2 most recent projects (highest IDs)
-  const recentProjects = [...projectData]
+  // Show explicitly featured projects, most recent first
+  const recentProjects = projectData
+    .filter((project) => project.featured)
     .sort((a, b) => b.id - a.id)
     .slice(0, 2);
 
